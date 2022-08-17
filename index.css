@@ -416,7 +416,7 @@ h4 {
 }
 
 .modal-content {
-    max-width: 486px;
+    max-width: 390px;
     background-color: #fefefe;
     margin: 5px auto;
     border: 3px solid #d77e82;
@@ -434,6 +434,7 @@ h4 {
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
+    max-width: 270px;
 }
 .modal-content-passw{
     display: flex;
@@ -472,7 +473,7 @@ h4 {
 }
 
 .input {
-    width: 400px;
+    max-width: 270px;
     padding: 10px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -497,7 +498,7 @@ h4 {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 400px;
+    width: 270px;
 }
 
 .button-form:hover {
@@ -3578,12 +3579,6 @@ h4 {
 
     .header-account-register::before {
         top: 0px;
-    }
-
-    /* form */
-    .input,
-    .button-form {
-        width: 275px;
     }
 
     /*  */
