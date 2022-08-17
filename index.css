@@ -426,7 +426,21 @@ h4 {
     padding: 30px;
     position: relative;
 }
-
+.modal-content-blocks{
+    padding: 0 5px;
+}
+.modal-content-blocks-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.modal-content-passw{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .close {
     position: absolute;
     right: 25px;
@@ -3569,7 +3583,7 @@ h4 {
     /* form */
     .input,
     .button-form {
-        width: 230px;
+        width: 275px;
     }
 
     /*  */
