@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="maskL">
+        <div class="loader center">
+            <span class="loader-span"></span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-navigation">
+                <a class="header-navigation-logo" href="./home.html"><img class="header-navigation-logo-img"
+                        src="./img/logo.png"></a>
+                <nav class="header-navigation-list">
+                    <ul class="header-navigation-list-ul">
+                        <li><a href="./about.html" class="header-navigation-list-ul-link">About Us</a></li>
+                        <li><a href="./courses.html" class="header-navigation-list-ul-link">Courses</a></li>
+                        <li><a href="./events.html" class="header-navigation-list-ul-link active-page">Events</a></li>
+                        <li><a href="./blog.html" class="header-navigation-list-ul-link">Blog</a></li>
+                        <li><a href="./contacts.html" class="header-navigation-list-ul-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-account">
+                <a href="#" class="header-consultation-link">Get consultation</a>
+                <div class="header-account-register">
+                    <a href="#" id="login" class="header-account-register-login"
+                        onclick="document.getElementById('id01').style.display='block'">Log in /
+                        Register</a>
+                </div>
+            </div>
+            <div class="burger-burger">
+                <div class="burger">
+                    <div class="rect"></div>
+                    <div class="rect"></div>
+                    <div class="rect"></div>
+                </div>
+                <nav class="burger-header-navigation-list">
+                    <ul class="burger-header-navigation-list-ul">
+                        <li><a href="./about.html" class="burger-header-navigation-list-ul-link">About Us</a></li>
+                        <li><a href="./courses.html" class="burger-header-navigation-list-ul-link">Courses</a></li>
+                        <li><a href="./events.html" class="burger-header-navigation-list-ul-link">Events</a></li>
+                        <li><a href="./blog.html" class="burger-header-navigation-list-ul-link">Blog</a></li>
+                        <li><a href="./contacts.html" class="burger-header-navigation-list-ul-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <h2 class="modal-content-h2">Sign in</h2>
+                        <p class="modal-content-p">Sign in to your account using email and password provided
+                            during registration.</p>
+                        <label for="email">Email</label>
+                        <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        <label for="psw">Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <div>
+                            <input type="checkbox" checked="checked" name="remember">Keep me signed in
+                            <a href="#" class="form-link">Forgot password?</a>
+                        </div>
+                        <button class="button-form" type="submit">Sign in</button>
+                        <p class="form-p">Don't have an account?<a href="#signup"
+                                onclick="document.getElementById('signup').style.opacity='1'"
+                                class="form-link-signin">Sign up</a>
+                        </p>
+                        <div class="form-bottom">
+                            <p class="form-bottom-p">Or sign in with</p>
+                            <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Google.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Twitter.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Linked-In.png"></a>
+                        </div>
+                    </div>
+                </form>
+                <form id="signup" onclick="document.getElementById('signup').style.opacity='1'"
+                    class="modal-content animate" action="/action_page.php">
+                    <div class="container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <h2 class="modal-content-h2">Sign up</h2>
+                        <p class="modal-content-p">Registration takes less than a minute but gives you full
+                            control over your studying.</p>
+                        <label for="name">Full name</label>
+                        <input class="input" type="text" placeholder="Your working email" name="name" required>
+                        <label for="email">Email</label>
+                        <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        <label for="psw">Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <label for="psw">Confirm Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <div>
+                            <input type="checkbox" checked="checked" name="remember">Remember me
+                        </div>
+                        <button class="button-form" type="submit">Sign up</button>
+                        <p class="form-p">Already have an account?<a href="" class="form-link-signin">Sign
+                                in</a>
+                        </p>
+                        <div class="form-bottom">
+                            <p class="form-bottom-p">Or sign in with</p>
+                            <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Google.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Twitter.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Linked-In.png"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main class="main">
+            <section class="events section-events">
+                <h2 class="events section-events-h2 animation">Our Events</h2>
+                <h3 class="events section-events-h3 animation">Lectures, workshops & master-classes</h3>
+                <div class="portfolio-nav animation">
+                    <button class="btn active" href="" data-filter>All</button>
+                    <button class="btn" data-filter="Onine-lecture">Onine lecture</button>
+                    <button class="btn" data-filter="Onine-workshop">Onine workshop</button>
+                    <button class="btn" data-filter="Onine-master-class">Onine master-class</button>
+                </div>
+                <div class="events section-events-items animation">
+                    <div class="load-block">
+                    <div class="events section-events-items-item" data-tags="Onine-master-class">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">05</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">August </p>
+                                <p class="section-events-items-item-time-time">11:00 – 14:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Formation of the organizational
+                                structure of the company in the face of uncertainty.</p>
+                            <p class="section-events-items-item-description-p">Online master-class</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-lecture">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">24</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">July </p>
+                                <p class="section-events-items-item-time-time">11:00 – 12:30</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Formation of the organizational
+                                structure of the company in the face of uncertainty.</p>
+                            <p class="section-events-items-item-description-p">Onine lecture</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-workshop">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">16</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">July </p>
+                                <p class="section-events-items-item-time-time">10:00 – 13:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">How to apply methods of
+                                speculative design in practice. Worldbuilding prototyping.</p>
+                            <p class="section-events-items-item-description-p">Onine workshop</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-workshop">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">16</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">July </p>
+                                <p class="section-events-items-item-time-time">10:00 – 13:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">How to apply methods of
+                                speculative design in practice. Worldbuilding prototyping.</p>
+                            <p class="section-events-items-item-description-p">Onine workshop</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-master-class">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">16</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">July </p>
+                                <p class="section-events-items-item-time-time">10:00 – 13:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Connection to Microsoft Excel
+                                and Google Sheets, Data Visualization in Power BI.</p>
+                            <p class="section-events-items-item-description-p">Onine master-class</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-lecture">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">15</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">June </p>
+                                <p class="section-events-items-item-time-time">10:00 – 13:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Marketing or growth hacking:
+                                main differences and what business needs.</p>
+                            <p class="section-events-items-item-description-p">Onine lecture</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-lecture">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">02</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">June </p>
+                                <p class="section-events-items-item-time-time">11:00 – 13:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">How to brief a client and
+                                present your design to approve it from the first show.</p>
+                            <p class="section-events-items-item-description-p">Onine lecture</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-lecture">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">29</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">May </p>
+                                <p class="section-events-items-item-time-time">11:00 – 12:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Who is a project manager and do
+                                I want to be PM?</p>
+                            <p class="section-events-items-item-description-p">Onine lecture</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="events section-events-items-item" data-tags="Onine-lecture">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">18</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">May </p>
+                                <p class="section-events-items-item-time-time">10:00 – 12:00</p>
+                            </div>
+                        </div>
+                        <div class="events section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">The company's business page as
+                                an additional tool to support the announcement of vacancies.</p>
+                            <p class="section-events-items-item-description-p">Onine lecture</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="section-subscribe">
+                <div>
+                    <h2 class="section-subscribe-h2 scroll-element js-scroll fade-in">Don’t miss anything</h2>
+                    <h3 class="section-subscribe-h3 scroll-element js-scroll fade-in">Subscribe to the Createx School
+                        announcements</h3>
+                </div>
+                <div class="section-subscribe-input scroll-element js-scroll fade-in">
+                    <input class="section-subscribe-input-input" type="email" placeholder="Your working email">
+                    <button class="section-subscribe-input-button" type="submit">Subscribe</button>
+                </div>
+                <img class="section-subscribe-img-left" src="./img/illustration-sub.png" alt="">
+                <img class="section-subscribe-img-right" src="./img/illustration-sub.png" alt="">
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <img class="footer-top-item-img" src="./img/logo-footer.png" alt="">
+                    <p class="footer-top-item-p">Createx Online School is a leader in online studying. We have lots
+                        of courses and programs from the main market experts. We provide relevant approaches to online
+                        learning, internships and employment in the largest companies in the country. </p>
+                    <div class="footer-top-item-links">
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-f.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-tw.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-youtube.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-telegram.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-instagram.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-In.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-top-item accordion-footer container-accordion flow scroll-element js-scroll fade-in">
+                        <div class="accordion-footer__item">
+                            <h5 class="footer-top-item-h5 accordion-footer__item--trigger"
+                                id="accordion-footer__trigger-1" aria-expanded="false"
+                                aria-controls="accordion-footer__panel-1"> <span class="accordion-footer-span">SITE
+                                    MAP</h5>
+                            <ul id="accordion-footer__panel-1" role="region"
+                                aria-labelledby="accordion-footer__trigger-1"
+                                class="footer-top-item-ul accordion-footer__item--panel">
+                                <li><a href="./about.html" class="footer-top-item-page">About Us</a></li>
+                                <li><a href="./courses.html" class="footer-top-item-page">Courses</a></li>
+                                <li><a href="./events.html" class="footer-top-item-page">Events</a></li>
+                                <li><a href="./blog.html" class="footer-top-item-page">Blog</a></li>
+                                <li><a href="./contacts.html" class="footer-top-item-page">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="accordion-footer__item">
+                            <h5 class="footer-top-item-h5 accordion-footer__item--trigger"
+                                id="accordion-footer__trigger-1" aria-expanded="false"
+                                aria-controls="accordion-footer__panel-1"> <span class="accordion-footer-span">COURSES
+                            </h5>
+                            <ul id="accordion-footer__panel-1" role="region"
+                                aria-labelledby="accordion-footer__trigger-1"
+                                class="footer-top-item-ul accordion-footer__item--panel">
+                                <li><a href="#" class="footer-top-item-page">Marketing</a></li>
+                                <li><a href="#" class="footer-top-item-page">Management</a></li>
+                                <li><a href="#" class="footer-top-item-page">HR & Recruting</a></li>
+                                <li><a href="#" class="footer-top-item-page">Design</a></li>
+                                <li><a href="#" class="footer-top-item-page">Development</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <h5 class="footer-top-item-h5">CONTACT US</h5>
+                    <div class="footer-top-item-contact">
+                        <a href="#" class="footer-top-item-page-link-tel">(405) 555-0128</a>
+                        <a href="#" class="footer-top-item-page-link-email">hello@createx.com</a>
+                    </div>
+                </div>
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <h5 class="footer-top-item-h5">SIGN UP TO OUR NEWSLETTER</h5>
+                    <div class="footer-top-item-form">
+                        <input class="footer-top-item-input" type="email" placeholder="Email address">
+                        <button type="submit" class="footer-top-item-button"><img src="./img/Line (Stroke)-footer.png"
+                                alt=""></button>
+                    </div>
+                    <p class="footer-top-item-input-p">*Subscribe to our newsletter to receive communications and early
+                        updates from Createx SEO Agency.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom-p" id="copyright"></p>
+                <button class="footer-bottom-button" onclick="topFunction()" id="myBtn" title="Go to top">GO TO
+                    TOP</button>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/GianlucaChiarani/AutoFilter@0.3/autofilter.js"></script>
+    <script src="./jquery.simpleLoadMore.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>

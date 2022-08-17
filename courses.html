@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="maskL">
+        <div class="loader center">
+            <span class="loader-span"></span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-navigation">
+                <a class="header-navigation-logo" href="./home.html"><img class="header-navigation-logo-img"
+                        src="./img/logo.png"></a>
+                <nav class="header-navigation-list">
+                    <ul class="header-navigation-list-ul">
+                        <li><a href="./about.html" class="header-navigation-list-ul-link">About Us</a></li>
+                        <li><a href="./courses.html" class="header-navigation-list-ul-link active-page">Courses</a></li>
+                        <li><a href="./events.html" class="header-navigation-list-ul-link">Events</a></li>
+                        <li><a href="./blog.html" class="header-navigation-list-ul-link">Blog</a></li>
+                        <li><a href="./contacts.html" class="header-navigation-list-ul-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-account">
+                <a href="#" class="header-consultation-link">Get consultation</a>
+                <div class="header-account-register">
+                    <a href="#" id="login" class="header-account-register-login"
+                        onclick="document.getElementById('id01').style.display='block'">Log in /
+                        Register</a>
+                </div>
+            </div>
+            <div class="burger-burger">
+                <div class="burger">
+                    <div class="rect"></div>
+                    <div class="rect"></div>
+                    <div class="rect"></div>
+                </div>
+                <nav class="burger-header-navigation-list">
+                    <ul class="burger-header-navigation-list-ul">
+                        <li><a href="./about.html" class="burger-header-navigation-list-ul-link">About Us</a></li>
+                        <li><a href="./courses.html" class="burger-header-navigation-list-ul-link">Courses</a></li>
+                        <li><a href="./events.html" class="burger-header-navigation-list-ul-link">Events</a></li>
+                        <li><a href="./blog.html" class="burger-header-navigation-list-ul-link">Blog</a></li>
+                        <li><a href="./contacts.html" class="burger-header-navigation-list-ul-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <h2 class="modal-content-h2">Sign in</h2>
+                        <p class="modal-content-p">Sign in to your account using email and password provided
+                            during registration.</p>
+                        <label for="email">Email</label>
+                        <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        <label for="psw">Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <div>
+                            <input type="checkbox" checked="checked" name="remember">Keep me signed in
+                            <a href="#" class="form-link">Forgot password?</a>
+                        </div>
+                        <button class="button-form" type="submit">Sign in</button>
+                        <p class="form-p">Don't have an account?<a href="#signup"
+                                onclick="document.getElementById('signup').style.opacity='1'"
+                                class="form-link-signin">Sign up</a>
+                        </p>
+                        <div class="form-bottom">
+                            <p class="form-bottom-p">Or sign in with</p>
+                            <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Google.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Twitter.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Linked-In.png"></a>
+                        </div>
+                    </div>
+                </form>
+                <form id="signup" onclick="document.getElementById('signup').style.opacity='1'"
+                    class="modal-content animate" action="/action_page.php">
+                    <div class="container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <h2 class="modal-content-h2">Sign up</h2>
+                        <p class="modal-content-p">Registration takes less than a minute but gives you full
+                            control over your studying.</p>
+                        <label for="name">Full name</label>
+                        <input class="input" type="text" placeholder="Your working email" name="name" required>
+                        <label for="email">Email</label>
+                        <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        <label for="psw">Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <label for="psw">Confirm Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <div>
+                            <input type="checkbox" checked="checked" name="remember">Remember me
+                        </div>
+                        <button class="button-form" type="submit">Sign up</button>
+                        <p class="form-p">Already have an account?<a href="" class="form-link-signin">Sign
+                                in</a>
+                        </p>
+                        <div class="form-bottom">
+                            <p class="form-bottom-p">Or sign in with</p>
+                            <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Google.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Twitter.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Linked-In.png"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main class="main">
+            <section class="courses section-header">
+                <p class="courses section-header-p animation">course</p>
+                <h1 class="courses section-header-h1 animation">Enjoy studying with Createx Online Courses
+                </h1>
+            </section>
+            <section class="section-about">
+                <div class="courses section-about-article scroll-element js-scroll fade-in">
+                    <h3 class="section-about-article-h3 scroll-element js-scroll fade-in">About the course</h3>
+                    <p class="courses section-about-article-p scroll-element js-scroll fade-in">Bibendum vulputate
+                        adipiscing
+                        venenatis at est, a eu tincidunt. Leo aenean congue in sagittis, felis maecenas amet varius at.
+                        Pellentesque euismod in faucibus at elementum. Tellus maecenas libero est tempus sit cras at
+                        malesuada diam. Consequat senectus dictumst non hac dignissim montes, pretium, egestas molestie.
+                        Sed magna aliquet ornare nibh vel lectus diam eget pretium. Lorem risus nunc tincidunt tortor,
+                        mi nulla pellentesque</p>
+                    <div>
+                        <h4 class="section-about-items-h3 scroll-element js-scroll fade-in">You will learn:</h4>
+                        <ul class="courses section-about-items-ul scroll-element js-scroll fade-in">
+                            <li class="section-about-items-li">A fermentum in morbi pretium aliquam adipiscing donec
+                                tempus.
+                            </li>
+                            <li class="section-about-items-li">Vulputate placerat amet pulvinar lorem nisl.</li>
+                            <li class="section-about-items-li">Consequat feugiat habitant gravida quisque elit bibendum
+                                id
+                                adipiscing sed.</li>
+                            <li class="section-about-items-li">Etiam duis lobortis in fames ultrices commodo nibh.</li>
+                            <li class="section-about-items-li">Tincidunt sagittis neque sem ac eget.</li>
+                            <li class="section-about-items-li">Ultricies amet justo et eget quisque purus vulputate
+                                dapibus
+                                tortor.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="courses section-about-items scroll-element js-scroll fade-in">
+                    <div class="courses section-about-items-item">
+                        <h4 class="courses section-about-items-item-h4">Dates</h4>
+                        <h5 class="courses section-about-items-item-h5">Sept 7 – Nov 2</h5>
+                        <p class="courses section-about-items-item-p">Metus turpis sit lorem lacus, in elit tellus
+                            lacus.</p>
+                    </div>
+                    <div class="courses section-about-items-item">
+                        <h4 class="courses section-about-items-item-h4">Duration</h4>
+                        <h5 class="courses section-about-items-item-h5">2 months – 8 lessons</h5>
+                        <p class="courses section-about-items-item-p">Rhoncus pellentesque auctor auctor orci vulputate
+                            faucibus quis ut.</p>
+                    </div>
+                    <div class="courses section-about-items-item">
+                        <h4 class="courses section-about-items-item-h4">Price</h4>
+                        <h5 class="courses section-about-items-item-h5">$120 per month</h5>
+                        <p class="courses section-about-items-item-p">Nulla sem adipiscing adipiscing felis fringilla.
+                            Adipiscing mauris quam ac elit tristique dis.</p>
+                    </div>
+                    <a href="#" class="courses section-about-items-item-link">Join the course</a>
+                </div>
+            </section>
+            <section class="courses section-curator">
+                <img src="./img/courses/curator-image.png" alt=""
+                    class="courses section-curator-img scroll-element js-scroll fade-in">
+                <div class="courses section-curator-items">
+                    <h2 class="courses section-curator-items-h2 scroll-element js-scroll fade-in">Course curator</h2>
+                    <h3 class="courses section-curator-items-h3 scroll-element js-scroll fade-in">Cody Fisher</h3>
+                    <h4 class="courses section-curator-items-h4 scroll-element js-scroll fade-in">Senior UX designer in
+                        IT Product Company</h4>
+                    <div class="courses section-curator-items-info scroll-element js-scroll fade-in">
+                        <div class="courses section-curator-items-info-item">
+                            <img src="./img/courses/Star-courses.png" alt="" class="courses-section-curator-items-info-img">
+                            <p class="courses section-curator-items-info-p">4.9 rate</p>
+                        </div>
+                        <div class="courses section-curator-items-info-item">
+                            <img src="./img/courses/Play-courses.png" alt="" class="courses-section-curator-items-info-img">
+                            <p class="courses section-curator-items-info-p">4 courses</p>
+                        </div>
+                        <div class="courses section-curator-items-info-item">
+                            <img src="./img/courses/Profile-courses.png" alt="" class="courses-section-curator-items-info-img">
+                            <p class="courses section-curator-items-info-p">350 students</p>
+                        </div>
+                    </div>
+                    <p class="courses section-curator-items-p scroll-element js-scroll fade-in">Mattis adipiscing
+                        aliquam eu proin metus a iaculis faucibus. Tempus curabitur venenatis, vulputate venenatis
+                        fermentum ante. Nisl, amet id semper semper quis commodo, consequat. Massa rhoncus sit morbi
+                        odio. Sit maecenas nibh consectetur vel diam. Sem vulputate molestie laoreet at massa sed
+                        pharetra. Ac commodo platea id habitasse proin. Nullam sit nec ipsum posuere non. Nam vel
+                        aliquam tristique sollicitudin interdum quam. </p>
+                    <div class="courses section-curator-items-links scroll-element js-scroll fade-in">
+                        <a href="#" class="courses section-curator-items-link"><img
+                                class="courses section-curator-items-link-img" src="./img/courses/Facebook-courses.png"
+                                alt=""></a>
+                        <a href="#" class="courses section-curator-items-link"><img
+                                class="courses section-curator-items-link-img" src="./img/courses/behance-courses.png"
+                                alt=""></a>
+                        <a href="#" class="courses section-curator-items-link"><img
+                                class="courses section-curator-items-link-img" src="./img/courses/Twitter-courses.png"
+                                alt=""></a>
+                        <a href="#" class="courses section-curator-items-link"><img
+                                class="courses section-curator-items-link-img" src="./img/courses/Linked-In-courses.png"
+                                alt=""></a>
+                    </div>
+                </div>
+            </section>
+            <section class="courses section-steps">
+                <h2 class="courses section-steps-h2 scroll-element js-scroll fade-in">Main steps</h2>
+                <h3 class="courses section-steps-h3 scroll-element js-scroll fade-in">Online learning process</h3>
+                <div class="courses section-steps-items">
+                    <a href="#" class="courses section-steps-items-item scroll-element js-scroll fade-in">
+                        <div class="courses section-steps-items-item-number">
+                            <p class="courses section-steps-items-item-number-p">01</p>
+                            <span class="courses section-steps-items-item-number-span"></span>
+                        </div>
+                        <h4 class="courses section-steps-items-item-h4">Watching online video lectures</h4>
+                        <p class="courses section-steps-items-item-p">Culpa nostrud commodo ea consequat aliquip
+                            reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+                    </a>
+                    <a href="#" class="courses section-steps-items-item scroll-element js-scroll fade-in">
+                        <div class="courses section-steps-items-item-number">
+                            <p class="courses section-steps-items-item-number-p">02</p>
+                            <span class="courses section-steps-items-item-number-span"></span>
+                        </div>
+                        <h4 class="courses section-steps-items-item-h4">Passing test</h4>
+                        <p class="courses section-steps-items-item-p">Anim reprehenderit sint voluptate exercitation
+                            adipisicing laborum adipisicing. Minim ad tempor est ea.</p>
+                    </a>
+                    <a href="#" class="courses section-steps-items-item scroll-element js-scroll fade-in">
+                        <div class="courses section-steps-items-item-number">
+                            <p class="courses section-steps-items-item-number-p">03</p>
+                            <span class="courses section-steps-items-item-number-span"></span>
+                        </div>
+                        <h4 class="courses section-steps-items-item-h4">Curator’s feedback</h4>
+                        <p class="courses section-steps-items-item-p">Adipisicing esse aliqua aliquip qui amet. Aute
+                            eiusmod dolore dolore et ad et veniam ad deserunt.</p>
+                    </a>
+                    <a href="#" class="courses section-steps-items-item scroll-element js-scroll fade-in">
+                        <div class="courses section-steps-items-item-number">
+                            <p class="courses section-steps-items-item-number-p">04</p>
+                            <span class="courses section-steps-items-item-number-span"></span>
+                        </div>
+                        <h4 class="courses section-steps-items-item-h4">Corrections if needed</h4>
+                        <p class="courses section-steps-items-item-p">Sit veniam aute dolore adipisicing nulla sit
+                            culpa. Minim mollit voluptate ullamco proident ea ad.</p>
+                    </a>
+                </div>
+            </section>
+            <section class="courses section-discount">
+                <div class="courses section-discount-count">
+                    <h3 class="courses section-discount-count-h3">20% discount for early birds!</h3>
+                    <div class="courses section-discount-count-counter" id="countdown">
+                        <ul class="courses section-discount-count-counter-ul">
+                            <li class="courses section-discount-count-counter-li"><span id="days"
+                                    class="courses section-discount-count-counter-span"></span>Days</li>
+                            <li class="courses section-discount-count-counter-li"><span id="hours"
+                                    class="courses section-discount-count-counter-span"></span>Hours</li>
+                            <li class="courses section-discount-count-counter-li"><span id="minutes"
+                                    class="courses section-discount-count-counter-span"></span>Mins</li>
+                            <li class="courses section-discount-count-counter-li"><span id="seconds"
+                                    class="courses section-discount-count-counter-span"></span>Sec</li>
+                        </ul>
+                    </div>
+                </div>
+                <form action="" class="courses section-discount-form-form">
+                    <input class="input-discount" name="name" type="text" placeholder="Your full name">
+                    <input class="input-discount" name="email" type="email" placeholder="Your working email">
+                    <input class="input-discount" name="number" type="tel" placeholder="Your phone number">
+
+                    <button type="submit" class="button-discount">Join the course</button>
+                </form>
+            </section>
+            <section class="courses section-about">
+                <div>
+                    <h2 class="section-about-items-h2  scroll-element js-scroll fade-in">For whom?</h2>
+                    <h3 class="section-about-items-h3 scroll-element js-scroll fade-in">Who will benefit from the
+                        course:</h3>
+                </div>
+                <div class="section-about-items">
+                    <ul class="section-about-items-ul scroll-element js-scroll fade-in">
+                        <li class="section-about-items-li">Specialists with more than 1 year of active work experience
+                        </li>
+                        <li class="section-about-items-li">Mobile app designers who want to improve their skills in
+                            solving business problems, creating and testing human-centered interfaces</li>
+                        <li class="section-about-items-li">Professional designers who want to feel more confident in UX
+                        </li>
+                        <li class="section-about-items-li">Specialists who would like to structure their knowledge, fill
+                            in the gaps</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="courses section-program">
+                <div>
+                    <h2 class="section-program-h2  scroll-element js-scroll fade-in">Course program</h2>
+                    <h3 class="section-program-h3 scroll-element js-scroll fade-in">What will you learn</h3>
+                </div>
+                <div class="courses section-program-items">
+                    <div class="accordion container-accordion flow">
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 1.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 2.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 3.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 4.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 5.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 6.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 7.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                        <div class="accordion__item">
+                            <h4 id="accordion__trigger-1" class="accordion__item--trigger" aria-expanded="false"
+                                aria-controls="accordion__panel-1"> <span class="accordion-span">Lesson 8.</span>
+                                Aliquet lectus urna viverra in odio.
+                            </h4>
+                            <div id="accordion__panel-1" class="accordion__item--panel" role="region"
+                                aria-labelledby="accordion__trigger-1">
+                                <p>Nulla amet, sagittis potenti rhoncus sit. Elit lectus nec pulvinar aliquet donec
+                                    enim, ornare. Lacus facilisi curabitur turpis varius mauris. Nisi, tempus risus,
+                                    odio mi suscipit sed. Curabitur faucibus porttitor quis sem lacus, arcu feugiat
+                                    facilisis. Commodo nunc orci vitae accumsan id.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="courses section-program-items-img" src="./img/courses/illustration-courses-program.png" alt="">
+                </div>
+            </section>
+            <section class="courses section-form">
+                <img class="courses section-form-img" src="./img/courses/illustration-courses-form.png" alt="">
+                <div class="courses section-form-items">
+                    <div>
+                        <h2 class="section-form-h2  scroll-element js-scroll fade-in">Leave a request now and get 20%
+                            off!</h2>
+                        <h3 class="section-form-h3 scroll-element js-scroll fade-in">Register for the course</h3>
+                    </div>
+                    <form action="" class="courses section-form-items-form">
+                        <label for="" class="courses section-form-items-form-label">Full Name</label>
+                        <input type="text" placeholder="Your full name" class="courses section-form-items-form-input">
+                        <label for="" class="courses section-form-items-form-label">Email</label>
+                        <input type="email" placeholder="Your working email"
+                            class="courses section-form-items-form-input">
+                        <label for="" class="courses section-form-items-form-label">Phone</label>
+                        <input type="tel" placeholder="Your phone number" class="courses section-form-items-form-input">
+                        <button type="submit" class="courses button-discount">Join the course</button>
+                    </form>
+                </div>
+            </section>
+            <section class="courses section-courses">
+                <div class="courses section-courses-top">
+                    <h2 class="section-courses-top-title-h2 scroll-element js-scroll fade-in">Check other courses</h2>
+                    <h3 class="section-courses-top-title-h3 scroll-element js-scroll fade-in">You may also like</h3>
+                </div>
+                <div class="courses-swiper swiper-container courses scroll-element js-scroll fade-in">
+                    <div class="swiper-buttons courses">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="courses swiper-wrapper">
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto1.png" alt="" class="courses section-courses-item-img ">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p green">Marketing</p>
+                                <h4 class="section-courses-item-article-h4">The Ultimate Google Ads Training Course
+                                </h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$100</p>
+                                    <span class="section-courses-item-article-price-author">by Jerome Bell</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto2.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p blue">Management</p>
+                                <h4 class="section-courses-item-article-h4">Prduct Management Fundamentals</h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$480</p>
+                                    <span class="section-courses-item-article-price-author">by Marvin
+                                        McKinney</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto3.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p orange">HR & Recruting</p>
+                                <h4 class="section-courses-item-article-h4">HR Management and Analytics</h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$200</p>
+                                    <span class="section-courses-item-article-price-author">by Leslie Alexander
+                                        Li</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto4.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p green">Marketing</p>
+                                <h4 class="section-courses-item-article-h4">Brand Management & PR Communications
+                                </h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$530</p>
+                                    <span class="section-courses-item-article-price-author">by Kristin Watson</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto5.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p blue">Management</p>
+                                <h4 class="section-courses-item-article-h4">Business Development Management</h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$400</p>
+                                    <span class="section-courses-item-article-price-author">by Dianne Russell</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto6.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p pink">Design</p>
+                                <h4 class="section-courses-item-article-h4">Graphic Design Basic</h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$500</p>
+                                    <span class="section-courses-item-article-price-author">by Guy Hawkins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto7.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p violet">Development</p>
+                                <h4 class="section-courses-item-article-h4">Highload Software Architecture</h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$600</p>
+                                    <span class="section-courses-item-article-price-author">by Brooklyn
+                                        Simmons</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto8.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p orange">HR & Recruting</p>
+                                <h4 class="section-courses-item-article-h4">Human Resources – Selection and
+                                    Recruitment</h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$150</p>
+                                    <span class="section-courses-item-article-price-author">by Kathryn Murphy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses swiper-slide section-courses-item">
+                            <img src="./img/courses/courses_all-foto9.png" alt="" class="courses section-courses-item-img">
+                            <div class="courses section-courses-item-article">
+                                <p class="section-courses-item-article-p pink">Design</p>
+                                <h4 class="section-courses-item-article-h4">User Experience. Human-centered Design
+                                </h4>
+                                <div class="section-courses-item-article-prices">
+                                    <p class="section-courses-item-article-price">$240</p>
+                                    <span class="section-courses-item-article-price-author">by Cody Fisher</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-section-bottom">
+                    <h4>Do you want more courses?</h4>
+                    <a href="./courses_all.html"
+                        class="courses section-courses-top-link scroll-element js-scroll fade-in">View all
+                        courses</a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <img class="footer-top-item-img" src="./img/logo-footer.png" alt="">
+                    <p class="footer-top-item-p">Createx Online School is a leader in online studying. We have lots
+                        of courses and programs from the main market experts. We provide relevant approaches to online
+                        learning, internships and employment in the largest companies in the country. </p>
+                    <div class="footer-top-item-links">
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-f.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-tw.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-youtube.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-telegram.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-instagram.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-In.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-top-item accordion-footer container-accordion flow scroll-element js-scroll fade-in">
+                        <div class="accordion-footer__item">
+                            <h5 class="footer-top-item-h5 accordion-footer__item--trigger"
+                                id="accordion-footer__trigger-1" aria-expanded="false"
+                                aria-controls="accordion-footer__panel-1"> <span class="accordion-footer-span">SITE
+                                    MAP</h5>
+                            <ul id="accordion-footer__panel-1" role="region"
+                                aria-labelledby="accordion-footer__trigger-1"
+                                class="footer-top-item-ul accordion-footer__item--panel">
+                                <li><a href="./about.html" class="footer-top-item-page">About Us</a></li>
+                                <li><a href="./courses.html" class="footer-top-item-page">Courses</a></li>
+                                <li><a href="./events.html" class="footer-top-item-page">Events</a></li>
+                                <li><a href="./blog.html" class="footer-top-item-page">Blog</a></li>
+                                <li><a href="./contacts.html" class="footer-top-item-page">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="accordion-footer__item">
+                            <h5 class="footer-top-item-h5 accordion-footer__item--trigger"
+                                id="accordion-footer__trigger-1" aria-expanded="false"
+                                aria-controls="accordion-footer__panel-1"> <span class="accordion-footer-span">COURSES
+                            </h5>
+                            <ul id="accordion-footer__panel-1" role="region"
+                                aria-labelledby="accordion-footer__trigger-1"
+                                class="footer-top-item-ul accordion-footer__item--panel">
+                                <li><a href="#" class="footer-top-item-page">Marketing</a></li>
+                                <li><a href="#" class="footer-top-item-page">Management</a></li>
+                                <li><a href="#" class="footer-top-item-page">HR & Recruting</a></li>
+                                <li><a href="#" class="footer-top-item-page">Design</a></li>
+                                <li><a href="#" class="footer-top-item-page">Development</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <h5 class="footer-top-item-h5">CONTACT US</h5>
+                    <div class="footer-top-item-contact">
+                        <a href="#" class="footer-top-item-page-link-tel">(405) 555-0128</a>
+                        <a href="#" class="footer-top-item-page-link-email">hello@createx.com</a>
+                    </div>
+                </div>
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <h5 class="footer-top-item-h5">SIGN UP TO OUR NEWSLETTER</h5>
+                    <div class="footer-top-item-form">
+                        <input class="footer-top-item-input" type="email" placeholder="Email address">
+                        <button type="submit" class="footer-top-item-button"><img src="./img/Line (Stroke)-footer.png"
+                                alt=""></button>
+                    </div>
+                    <p class="footer-top-item-input-p">*Subscribe to our newsletter to receive communications and early
+                        updates from Createx SEO Agency.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom-p" id="copyright"></p>
+                <button class="footer-bottom-button" onclick="topFunction()" id="myBtn" title="Go to top">GO TO
+                    TOP</button>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/GianlucaChiarani/AutoFilter@0.3/autofilter.js"></script>
+    <script src="./jquery.simpleLoadMore.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
