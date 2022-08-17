@@ -67,11 +67,16 @@
                         <h2 class="modal-content-h2">Sign in</h2>
                         <p class="modal-content-p">Sign in to your account using email and password provided
                             during registration.</p>
+                        <div class="modal-content-blocks">
+                        <div class="modal-content-blocks-block">
                         <label for="email">Email</label>
                         <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        </div>
+                        <div class="modal-content-blocks-block">
                         <label for="psw">Password</label>
                         <input class="input" type="password" placeholder="Enter Password" name="psw" required>
-                        <div>
+                            </div>
+                        <div class="modal-content-passw">
                             <input type="checkbox" checked="checked" name="remember">Keep me signed in
                             <a href="#" class="form-link">Forgot password?</a>
                         </div>
@@ -80,6 +85,7 @@
                                 onclick="document.getElementById('signup').style.opacity='1'"
                                 class="form-link-signin">Sign up</a>
                         </p>
+                        </div>
                         <div class="form-bottom">
                             <p class="form-bottom-p">Or sign in with</p>
                             <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
@@ -97,16 +103,26 @@
                         <h2 class="modal-content-h2">Sign up</h2>
                         <p class="modal-content-p">Registration takes less than a minute but gives you full
                             control over your studying.</p>
+                        <div class="modal-content-blocks">
+                        <div class="modal-content-blocks-block">
                         <label for="name">Full name</label>
                         <input class="input" type="text" placeholder="Your working email" name="name" required>
+                        </div>
+                        <div class="modal-content-blocks-block">
                         <label for="email">Email</label>
                         <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        </div>
+                        <div class="modal-content-blocks-block">
                         <label for="psw">Password</label>
                         <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        </div>
+                        <div class="modal-content-blocks-block">
                         <label for="psw">Confirm Password</label>
                         <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        </div>
                         <div>
-                            <input type="checkbox" checked="checked" name="remember">Remember me
+                        <input type="checkbox" checked="checked" name="remember">Remember me
+                        </div>
                         </div>
                         <button class="button-form" type="submit">Sign up</button>
                         <p class="form-p">Already have an account?<a href="" class="form-link-signin">Sign
