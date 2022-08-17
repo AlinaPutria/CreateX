@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="maskL">
+        <div class="loader center">
+            <span class="loader-span"></span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-navigation">
+                <a class="header-navigation-logo" href="./index.html"><img class="header-navigation-logo-img"
+                        src="./img/logo.png"></a>
+                <nav class="header-navigation-list">
+                    <ul class="header-navigation-list-ul">
+                        <li><a href="./about.html" class="header-navigation-list-ul-link">About Us</a></li>
+                        <li><a href="./courses.html" class="header-navigation-list-ul-link">Courses</a></li>
+                        <li><a href="./events.html" class="header-navigation-list-ul-link">Events</a></li>
+                        <li><a href="./blog.html" class="header-navigation-list-ul-link">Blog</a></li>
+                        <li><a href="./contacts.html" class="header-navigation-list-ul-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-account">
+                <a href="#" class="header-consultation-link">Get consultation</a>
+                <div class="header-account-register">
+                    <a href="#" id="login" class="header-account-register-login"
+                        onclick="document.getElementById('id01').style.display='block'">Log in /
+                        Register</a>
+                </div>
+            </div>
+            <div class="burger-burger">
+                <div class="burger">
+                    <div class="rect"></div>
+                    <div class="rect"></div>
+                    <div class="rect"></div>
+                </div>
+                <nav class="burger-header-navigation-list">
+                    <ul class="burger-header-navigation-list-ul">
+                        <li><a href="./about.html" class="burger-header-navigation-list-ul-link">About Us</a></li>
+                        <li><a href="./courses.html" class="burger-header-navigation-list-ul-link">Courses</a></li>
+                        <li><a href="./events.html" class="burger-header-navigation-list-ul-link">Events</a></li>
+                        <li><a href="./blog.html" class="burger-header-navigation-list-ul-link">Blog</a></li>
+                        <li><a href="./contacts.html" class="burger-header-navigation-list-ul-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <h2 class="modal-content-h2">Sign in</h2>
+                        <p class="modal-content-p">Sign in to your account using email and password provided
+                            during registration.</p>
+                        <label for="email">Email</label>
+                        <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        <label for="psw">Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <div>
+                            <input type="checkbox" checked="checked" name="remember">Keep me signed in
+                            <a href="#" class="form-link">Forgot password?</a>
+                        </div>
+                        <button class="button-form" type="submit">Sign in</button>
+                        <p class="form-p">Don't have an account?<a href="#signup"
+                                onclick="document.getElementById('signup').style.opacity='1'"
+                                class="form-link-signin">Sign up</a>
+                        </p>
+                        <div class="form-bottom">
+                            <p class="form-bottom-p">Or sign in with</p>
+                            <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Google.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Twitter.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Linked-In.png"></a>
+                        </div>
+                    </div>
+                </form>
+                <form id="signup" onclick="document.getElementById('signup').style.opacity='1'"
+                    class="modal-content animate" action="/action_page.php">
+                    <div class="container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                        <h2 class="modal-content-h2">Sign up</h2>
+                        <p class="modal-content-p">Registration takes less than a minute but gives you full
+                            control over your studying.</p>
+                        <label for="name">Full name</label>
+                        <input class="input" type="text" placeholder="Your working email" name="name" required>
+                        <label for="email">Email</label>
+                        <input class="input" type="email" placeholder="Your working email" name="email" required>
+                        <label for="psw">Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <label for="psw">Confirm Password</label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                        <div>
+                            <input type="checkbox" checked="checked" name="remember">Remember me
+                        </div>
+                        <button class="button-form" type="submit">Sign up</button>
+                        <p class="form-p">Already have an account?<a href="" class="form-link-signin">Sign
+                                in</a>
+                        </p>
+                        <div class="form-bottom">
+                            <p class="form-bottom-p">Or sign in with</p>
+                            <a href="" class="form-bottom-link"><img src="./img/Facebook.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Google.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Twitter.png"></a>
+                            <a href="" class="form-bottom-link"><img src="./img/Linked-In.png"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section-header">
+                <div class="section-header-midle">
+                    <div class="section-header-midle-blocks">
+                        <div class="section-header-video animation">
+                            <div class="video-button">
+                                <input class="input-video" type="checkbox">
+                                <div class="video">
+                                    <video
+                                        src="https://www.robmillsarchitects.com/files/land/city/RMA_Web_land_city_1.mp4"
+                                        loop muted autoplay playsinline></video>
+                                </div>
+                                <div class="text">
+                                    <span data-text="Play showreel"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="section-header-midle-blocks-h1 animation">Enjoy studying with Createx Online Courses
+                        </h1>
+                        <div class="section-header-midle-blocks-links">
+                            <a href="./about.html" class="section-header-midle-blocks-link-1 animation">About us</a>
+                            <a href="./courses.html" class="section-header-midle-blocks-link-2 animation">Explore
+                                courses</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="section-header-midle-img animation" src="./img/illustration.png">
+                    </div>
+                </div>
+                <div class="section-header-bottom">
+                    <div class="section-header-bottom-item">
+                        <h2 class="section-header-bottom-item-h2 scroll-element js-scroll fade-in">1200</h2>
+                        <p class="section-header-bottom-item-p scroll-element js-scroll fade-in">Students graduated</p>
+                    </div>
+                    <div class="section-header-bottom-item-circle scroll-element js-scroll fade-in"></div>
+                    <div class="section-header-bottom-item">
+                        <h2 class="section-header-bottom-item-h2 scroll-element js-scroll fade-in">84</h2>
+                        <p class="section-header-bottom-item-p scroll-element js-scroll fade-in">Completed courses</p>
+                    </div>
+                    <div class="section-header-bottom-item-circle scroll-element js-scroll fade-in"></div>
+                    <div class="section-header-bottom-item">
+                        <h2 class="section-header-bottom-item-h2 scroll-element js-scroll fade-in">16</h2>
+                        <p class="section-header-bottom-item-p scroll-element js-scroll fade-in">Qualified tutors</p>
+                    </div>
+                    <div class="section-header-bottom-item-circle scroll-element js-scroll fade-in"></div>
+                    <div class="section-header-bottom-item">
+                        <h2 class="section-header-bottom-item-h2 scroll-element js-scroll fade-in">5</h2>
+                        <p class="section-header-bottom-item-p scroll-element js-scroll fade-in">Years of experience</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-about">
+                <img class="section-about-img scroll-element js-scroll fade-in" src="./img/about/image-about.png" alt="">
+                <div class="section-about-items">
+                    <h2 class="section-about-items-h2  scroll-element js-scroll fade-in">Who we are</h2>
+                    <h3 class="section-about-items-h3 scroll-element js-scroll fade-in">Why Createx?</h3>
+                    <ul class="section-about-items-ul scroll-element js-scroll fade-in">
+                        <li class="section-about-items-li">A fermentum in morbi pretium aliquam adipiscing donec tempus.
+                        </li>
+                        <li class="section-about-items-li">Vulputate placerat amet pulvinar lorem nisl.</li>
+                        <li class="section-about-items-li">Consequat feugiat habitant gravida quisque elit bibendum id
+                            adipiscing sed.</li>
+                        <li class="section-about-items-li">Etiam duis lobortis in fames ultrices commodo nibh.</li>
+                        <li class="section-about-items-li">Tincidunt sagittis neque sem ac eget.</li>
+                        <li class="section-about-items-li">Ultricies amet justo et eget quisque purus vulputate dapibus
+                            tortor.</li>
+                    </ul>
+                    <a href="./about.html" class="section-about-items-link scroll-element js-scroll fade-in">More about us</a>
+                </div>
+            </section>
+            <section class="section-courses">
+                <div class="section-courses-top">
+                    <div class="section-courses-top-title">
+                        <h2 class="section-courses-top-title-h2 scroll-element js-scroll fade-in">Ready to learn?</h2>
+                        <h3 class="section-courses-top-title-h3 scroll-element js-scroll fade-in">Featured Courses</h3>
+                    </div>
+                    <a href="./courses_all.html" class="section-courses-top-link scroll-element js-scroll fade-in">View all courses</a>
+                </div>
+                <div class="section-courses-items">
+                    <a href="#" class="section-courses-item scroll-element js-scroll fade-in">
+                        <img src="./img/courses/courses-foto1.png" alt="" class="section-courses-item-img ">
+                        <div class="section-courses-item-article">
+                            <p class="section-courses-item-article-p green">Marketing</p>
+                            <h4 class="section-courses-item-article-h4">The Ultimate Google Ads Training Course</h4>
+                            <div class="section-courses-item-article-prices">
+                                <p class="section-courses-item-article-price">$100</p>
+                                <span class="section-courses-item-article-price-author">by Jerome Bell</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="section-courses-item scroll-element js-scroll fade-in">
+                        <img src="./img/courses/courses-foto2.png" alt="" class="section-courses-item-img">
+                        <div class="section-courses-item-article">
+                            <p class="section-courses-item-article-p blue">Management</p>
+                            <h4 class="section-courses-item-article-h4">Prduct Management Fundamentals</h4>
+                            <div class="section-courses-item-article-prices">
+                                <p class="section-courses-item-article-price">$480</p>
+                                <span class="section-courses-item-article-price-author">by Marvin McKinney</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="section-courses-item scroll-element js-scroll fade-in">
+                        <img src="./img/courses/courses-foto3.png" alt="" class="section-courses-item-img">
+                        <div class="section-courses-item-article">
+                            <p class="section-courses-item-article-p orange">HR & Recruting</p>
+                            <h4 class="section-courses-item-article-h4">HR Management and Analytics</h4>
+                            <div class="section-courses-item-article-prices">
+                                <p class="section-courses-item-article-price">$200</p>
+                                <span class="section-courses-item-article-price-author">by Leslie Alexander Li</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="section-courses-item scroll-element js-scroll fade-in">
+                        <img src="./img/courses/courses-foto4.png" alt="" class="section-courses-item-img">
+                        <div class="section-courses-item-article">
+                            <p class="section-courses-item-article-p green">Marketing</p>
+                            <h4 class="section-courses-item-article-h4">Brand Management & PR Communications</h4>
+                            <div class="section-courses-item-article-prices">
+                                <p class="section-courses-item-article-price">$530</p>
+                                <span class="section-courses-item-article-price-author">by Kristin Watson</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="section-courses-item scroll-element js-scroll fade-in">
+                        <img src="./img/courses/courses-foto5.png" alt="" class="section-courses-item-img">
+                        <div class="section-courses-item-article">
+                            <p class="section-courses-item-article-p blue">Management</p>
+                            <h4 class="section-courses-item-article-h4">Business Development Management</h4>
+                            <div class="section-courses-item-article-prices">
+                                <p class="section-courses-item-article-price">$400</p>
+                                <span class="section-courses-item-article-price-author">by Dianne Russell</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="section-courses-item scroll-element js-scroll fade-in">
+                        <img src="./img/courses/courses-foto6.png" alt="" class="section-courses-item-img">
+                        <div class="section-courses-item-article">
+                            <p class="section-courses-item-article-p pink">Design</p>
+                            <h4 class="section-courses-item-article-h4">Graphic Design Basic</h4>
+                            <div class="section-courses-item-article-prices">
+                                <p class="section-courses-item-article-price">$500</p>
+                                <span class="section-courses-item-article-price-author">by Guy Hawkins</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="section-benefits">
+                <h2 class="section-benefits-h2 scroll-element js-scroll fade-in">Our benefits</h2>
+                <h3 class="section-benefits-h3 scroll-element js-scroll fade-in">That’s how we do it</h3>
+                <div class="section-benefits-links">
+                    <a href="#" class="section-benefits-link active scroll-element js-scroll fade-in"><img
+                            class="section-benefits-link-img" src="./img/Star.png" alt="">Experienced Tutors</a>
+                    <a href="#" class="section-benefits-link scroll-element js-scroll fade-in"><img
+                            class="section-benefits-link-img" src="./img/Facebook.png" alt="">Feedback & Support</a>
+                    <a href="#" class="section-benefits-link scroll-element js-scroll fade-in"><img
+                            class="section-benefits-link-img" src="./img/Layouts.png" alt="">24/7 Online Library</a>
+                    <a href="#" class="section-benefits-link scroll-element js-scroll fade-in"><img
+                            class="section-benefits-link-img" src="./img/Chat.png" alt="">Community</a>
+                </div>
+                <div class="section-benefits-article">
+                    <div class="section-benefits-article-text">
+                        <h3 class="section-benefits-article-h3 scroll-element js-scroll fade-in">Only practicing tutors
+                        </h3>
+                        <p class="section-benefits-article-p scroll-element js-scroll fade-in">Urna nisi, arcu cras
+                            nunc. Aenean quam est lobortis mi non
+                            fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc,
+                            sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl
+                            accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.</p>
+                    </div>
+                    <img src="./img/illustration2.png" alt=""
+                        class="section-benefits-article-img scroll-element js-scroll fade-in">
+                </div>
+            </section>
+            <section class="section-events">
+                <h2 class="section-events-h2 scroll-element js-scroll fade-in">Our Events</h2>
+                <h3 class="section-events-h3 scroll-element js-scroll fade-in">Lectures & workshops</h3>
+                <div class="section-events-items">
+                    <div class="section-events-items-item scroll-element js-scroll fade-in">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">05</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">August </p>
+                                <p class="section-events-items-item-time-time">11:00 – 14:00</p>
+                            </div>
+                        </div>
+                        <div class="section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Formation of the organizational
+                                structure of the company in the face of uncertainty.</p>
+                            <p class="section-events-items-item-description-p">Online master-class</p>
+                        </div>
+                        <a href="./events_page.html" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="section-events-items-item scroll-element js-scroll fade-in">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">24</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">July </p>
+                                <p class="section-events-items-item-time-time">11:00 – 12:30</p>
+                            </div>
+                        </div>
+                        <div class="section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">Formation of the organizational
+                                structure of the company in the face of uncertainty.</p>
+                            <p class="section-events-items-item-description-p">Onine lecture</p>
+                        </div>
+                        <a href="#" class="section-events-items-item-link">View more</a>
+                    </div>
+                    <div class="section-events-items-item scroll-element js-scroll fade-in">
+                        <div class="section-events-items-item-time">
+                            <p class="section-events-items-item-time-date">16</p>
+                            <div>
+                                <p class="section-events-items-item-time-month">July </p>
+                                <p class="section-events-items-item-time-time">10:00 – 13:00</p>
+                            </div>
+                        </div>
+                        <div class="section-events-items-item-description">
+                            <p class="section-events-items-item-description-description">How to apply methods of
+                                speculative design in practice. Worldbuilding prototyping.</p>
+                            <p class="section-events-items-item-description-p">Onine workshop</p>
+                        </div>
+                        <a href="#" class="section-events-items-item-link">View more</a>
+                    </div>
+                </div>
+                <div class="section-events-bottom scroll-element js-scroll fade-in">
+                    <p class="section-events-bottom-p">Do you want more?</p>
+                    <a href="./events.html" class="section-events-bottom-link">Explore all events</a>
+                </div>
+            </section>
+            <section class="section-certificate">
+                <div class="section-certificate-article">
+                    <h2 class="section-certificate-article-h2 scroll-element js-scroll fade-in">Createx Certificate</h2>
+                    <h3 class="section-certificate-article-h3 scroll-element js-scroll fade-in">Your expertise will be
+                        confirmed</h3>
+                    <p class="section-certificate-article-p scroll-element js-scroll fade-in">We are accredited by
+                        international professional
+                        organizations and institutes:</p>
+                    <div class="section-certificate-article-img scroll-element js-scroll fade-in">
+                        <img class="section-certificate-article-img-img" src="./img/logo-delmarstrategy.png" alt="">
+                        <img class="section-certificate-article-img-img" src="./img/logo-sentinal.png" alt="">
+                        <img class="section-certificate-article-img-img" src="./img/logo-national.png" alt="">
+                    </div>
+                </div>
+                <img class="section-certificate-img scroll-element js-scroll fade-in" src="./img/certificate.png"
+                    alt="">
+            </section>
+            <section class="section-team">
+                <div class="section-team-article">
+                    <h2 class="section-team-article-h2 scroll-element js-scroll fade-in">Best tutors are all here</h2>
+                    <h3 class="section-team-article-h3 scroll-element js-scroll fade-in">Meet our team</h3>
+                </div>
+                <div class="home-swiper swiper-container scroll-element js-scroll fade-in">
+                    <div class="swiper-buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="section-team-items swiper-wrapper">
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto1.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <div class="mask-links">
+                                        <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                        <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                        <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Dianne Russell</h4>
+                                <p class="section-team-item-article-p">Founder and CEO</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto2.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Jerome Bell</h4>
+                                <p class="section-team-item-article-p">Founder and Program Director</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto3.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Kristin Watson</h4>
+                                <p class="section-team-item-article-p">Marketer, Curator of Marketing Course</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto4.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Marvin McKinney</h4>
+                                <p class="section-team-item-article-p">PM, Curator of Management Course</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto5.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <div class="mask-links">
+                                        <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                        <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                        <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Leslie Alexander Li</h4>
+                                <p class="section-team-item-article-p">Curator of HR & Recruting Course</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto6.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Kathryn Murphy</h4>
+                                <p class="section-team-item-article-p">Analyst and Marketing specialist</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto7.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Kathryn Murphy</h4>
+                                <p class="section-team-item-article-p">Analyst and Marketing specialist</p>
+                            </div>
+                        </div>
+                        <div class="section-team-item swiper-slide">
+                            <div class="section-team-item-head">
+                                <div class="section-team-item-head-img">
+                                    <img class="section-team-item-head-img-img" src="./img/about/foto8.png" alt="">
+                                </div>
+                                <div class="mask">
+                                    <a href="" class="mask-link"><img src="./img/about/Facebook-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Instagram-link.png" alt=""></a>
+                                    <a href="" class="mask-link"><img src="./img/about/Linked-In-link.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="section-team-item-article">
+                                <h4 class="section-team-item-article-h4">Brooklyn Simmons</h4>
+                                <p class="section-team-item-article-p">Curator of Development Course</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-blog">
+                <div class="section-blog-article">
+                    <div class="section-blog-article-article">
+                        <h2 class="section-blog-article-h2 scroll-element js-scroll fade-in">Our blog</h2>
+                        <h3 class="section-blog-article-h3 scroll-element js-scroll fade-in">Latest posts</h3>
+                    </div>
+                    <a href="./blog.html" class="section-blog-article-link scroll-element js-scroll fade-in">Go to blog</a>
+                </div>
+                <div class="section-blog-items">
+                    <div class="section-blog-items-item scroll-element js-scroll fade-in">
+                        <div class="section-blog-items-item-img">
+                            <img src="./img/blog/image-blog1.png" alt="" class="section-blog-items-item-img-img">
+                            <p class="section-blog-items-item-img-p"><img class="section-blog-items-item-img-p-img"
+                                    src="./img/blog/podcast.png" alt="">Podcast</p>
+                        </div>
+                        <div class="section-blog-items-item-description">
+                            <p class="section-blog-items-item-description-topic">Marketing</p>
+                            <p class="section-blog-items-item-description-data">September 4, 2020</p>
+                            <p class="section-blog-items-item-description-time">36 min</p>
+                        </div>
+                        <h4 class="section-blog-items-item-description-h4">What is traffic arbitrage and does it really
+                            make money?</h4>
+                        <p class="section-blog-items-item-description-p">Pharetra, ullamcorper iaculis viverra
+                            parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                            <a href="./blog_page.html" class="aboutUs-section-directions-item-article-link">Listen<img src="./img/about/Line (Stroke)-aboutus.png" alt="" class="aboutUs-section-directions-item-article-link-img"></a>
+                    </div>
+                    <div class="section-blog-items-item scroll-element js-scroll fade-in">
+                        <div class="section-blog-items-item-img">
+                            <img src="./img/blog/image-blog2.png" alt="" class="section-blog-items-item-img-img">
+                            <p class="section-blog-items-item-img-p"><img class="section-blog-items-item-img-p-img"
+                                    src="./img/blog/video.png" alt="">Video</p>
+                        </div>
+                        <div class="section-blog-items-item-description">
+                            <p class="section-blog-items-item-description-topic">Management</p>
+                            <p class="section-blog-items-item-description-data">August 25, 2020</p>
+                            <p class="section-blog-items-item-description-time">45 min</p>
+                        </div>
+                        <h4 class="section-blog-items-item-description-h4">What to do and who to talk to if you want to
+                            get feedback on the product</h4>
+                        <p class="section-blog-items-item-description-p">Neque a, senectus consectetur odio in aliquet
+                            nec eu. Ultricies ac nibh urna urna sagittis faucibus...</p>
+                            <a href="#" class="aboutUs-section-directions-item-article-link">Watch<img src="./img/about/Line (Stroke)-aboutus.png" alt="" class="aboutUs-section-directions-item-article-link-img"></a>
+                    </div>
+                    <div class="section-blog-items-item scroll-element js-scroll fade-in">
+                        <div class="section-blog-items-item-img">
+                            <img src="./img/blog/image-blog3.png" alt="" class="section-blog-items-item-img-img">
+                            <p class="section-blog-items-item-img-p"><img class="section-blog-items-item-img-p-img"
+                                    src="./img/blog/article.png" alt="">Design</p>
+                        </div>
+                        <div class="section-blog-items-item-description">
+                            <p class="section-blog-items-item-description-topic">Design</p>
+                            <p class="section-blog-items-item-description-data">August 8, 2020</p>
+                            <p class="section-blog-items-item-description-time">36 min</p>
+                        </div>
+                        <h4 class="section-blog-items-item-description-h4">Should you choose a creative profession if
+                            you are attracted to creativity?</h4>
+                        <p class="section-blog-items-item-description-p">Curabitur nisl tincidunt eros venenatis
+                            vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...</p>
+                            <a href="#" class="aboutUs-section-directions-item-article-link">Read<img src="./img/about/Line (Stroke)-aboutus.png" alt="" class="aboutUs-section-directions-item-article-link-img"></a>
+                    </div>
+                </div>
+            </section>
+            <section class="section-subscribe">
+                <div>
+                    <h2 class="section-subscribe-h2 scroll-element js-scroll fade-in">Don’t miss anything</h2>
+                    <h3 class="section-subscribe-h3 scroll-element js-scroll fade-in">Subscribe to the Createx School
+                        announcements</h3>
+                </div>
+                <div class="section-subscribe-input scroll-element js-scroll fade-in">
+                    <input class="section-subscribe-input-input" type="email" placeholder="Your working email">
+                    <button class="section-subscribe-input-button" type="submit">Subscribe</button>
+                </div>
+                <img class="section-subscribe-img-left" src="./img/illustration-sub.png" alt="">
+                <img class="section-subscribe-img-right" src="./img/illustration-sub.png" alt="">
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <img class="footer-top-item-img" src="./img/logo-footer.png" alt="">
+                    <p class="footer-top-item-p">Createx Online School is a leader in online studying. We have lots
+                        of courses and programs from the main market experts. We provide relevant approaches to online
+                        learning, internships and employment in the largest companies in the country. </p>
+                    <div class="footer-top-item-links">
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-f.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-tw.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-youtube.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-telegram.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-instagram.png" alt=""></a>
+                        <a href="" class="footer-top-item-link"><img class="footer-top-item-link-img"
+                                src="./img/footer-In.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-top-item accordion-footer container-accordion flow scroll-element js-scroll fade-in">
+                        <div class="accordion-footer__item">
+                            <h5 class="footer-top-item-h5 accordion-footer__item--trigger"
+                                id="accordion-footer__trigger-1" aria-expanded="false"
+                                aria-controls="accordion-footer__panel-1"> <span class="accordion-footer-span">SITE
+                                    MAP</h5>
+                            <ul id="accordion-footer__panel-1" role="region"
+                                aria-labelledby="accordion-footer__trigger-1"
+                                class="footer-top-item-ul accordion-footer__item--panel">
+                                <li><a href="./about.html" class="footer-top-item-page">About Us</a></li>
+                                <li><a href="./courses.html" class="footer-top-item-page">Courses</a></li>
+                                <li><a href="./events.html" class="footer-top-item-page">Events</a></li>
+                                <li><a href="./blog.html" class="footer-top-item-page">Blog</a></li>
+                                <li><a href="./contacts.html" class="footer-top-item-page">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="accordion-footer__item">
+                            <h5 class="footer-top-item-h5 accordion-footer__item--trigger"
+                                id="accordion-footer__trigger-1" aria-expanded="false"
+                                aria-controls="accordion-footer__panel-1"> <span class="accordion-footer-span">COURSES
+                            </h5>
+                            <ul id="accordion-footer__panel-1" role="region"
+                                aria-labelledby="accordion-footer__trigger-1"
+                                class="footer-top-item-ul accordion-footer__item--panel">
+                                <li><a href="#" class="footer-top-item-page">Marketing</a></li>
+                                <li><a href="#" class="footer-top-item-page">Management</a></li>
+                                <li><a href="#" class="footer-top-item-page">HR & Recruting</a></li>
+                                <li><a href="#" class="footer-top-item-page">Design</a></li>
+                                <li><a href="#" class="footer-top-item-page">Development</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <h5 class="footer-top-item-h5">CONTACT US</h5>
+                    <div class="footer-top-item-contact">
+                        <a href="#" class="footer-top-item-page-link-tel">(405) 555-0128</a>
+                        <a href="#" class="footer-top-item-page-link-email">hello@createx.com</a>
+                    </div>
+                </div>
+                <div class="footer-top-item scroll-element js-scroll fade-in">
+                    <h5 class="footer-top-item-h5">SIGN UP TO OUR NEWSLETTER</h5>
+                    <div class="footer-top-item-form">
+                        <input class="footer-top-item-input" type="email" placeholder="Email address">
+                        <button type="submit" class="footer-top-item-button"><img src="./img/Line (Stroke)-footer.png"
+                                alt=""></button>
+                    </div>
+                    <p class="footer-top-item-input-p">*Subscribe to our newsletter to receive communications and early
+                        updates from Createx SEO Agency.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom-p" id="copyright"></p>
+                <button class="footer-bottom-button" onclick="topFunction()" id="myBtn" title="Go to top">GO TO
+                    TOP</button>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/GianlucaChiarani/AutoFilter@0.3/autofilter.js"></script>
+    <script src="./jquery.simpleLoadMore.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
