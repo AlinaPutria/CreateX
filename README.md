@@ -9,4 +9,4 @@ Used in the work:
 - AutoFilter: An easy-to-use jQuery plugin https://github.com/GianlucaChiarani/AutoFilter;
 - Simple Load More: jQuery plugin https://github.com/zeshanshani/simple-load-more.
 
-![logo](https://user-images.githubusercontent.com/94079934/191823544-c9202f8a-1028-4edd-8387-7ce0d4f3ef29.png)
+![gif](https://user-images.githubusercontent.com/94079934/191828035-3f189736-59a8-4a30-b3e0-c9d63328067c.gif)
